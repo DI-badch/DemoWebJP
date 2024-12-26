@@ -1,0 +1,38 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Chạy khi có thay đổi trên nhánh 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'  # Chỉnh sửa theo phiên bản Node.js bạn đang dùng
+
+    - name: Install dependencies
+      run: |
+        cd apps/web-jp
+        npm install  # Hoặc dùng yarn tùy vào cách bạn quản lý package
+
+    - name: Build project
+      run: |
+        cd apps/web-jp
+        npm run build  # Hoặc build theo lệnh tương ứng trong package.json của bạn
+
+    - name: Azure Static Web Apps Deploy
+      uses: azure/static-web-apps-deploy@v1
+      with:
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}  # Đặt API Token trong GitHub secrets
+        branch: main
+        app_location: ./apps/web-jp  # Đường dẫn đến app của bạn trong TurboRepo
+        api_location: ./apps/api  # Nếu có API, nếu không thì bỏ qua
+        output_location: .next  # Thư mục chứa các file build
