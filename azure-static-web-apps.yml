@@ -34,5 +34,5 @@ jobs:
         azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}  # Đặt API Token trong GitHub secrets
         branch: main
         app_location: ./apps/web-jp  # Đường dẫn đến app của bạn trong TurboRepo
-        api_location: ./apps/api  # Nếu có API, nếu không thì bỏ qua
+        api_location:   # Nếu có API, nếu không thì bỏ qua
         output_location: .next  # Thư mục chứa các file build
