@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-lens-grotesk: "Lens Grotesk", sans-serif;
+  --font-mplus1: "M PLUS 1", sans-serif;
+  --color-primary: #3260ec;
+  --color-border: #a2a2a3;
+}
+
+.font-lens {
+  font-family: var(--font-lens-grotesk);
+}
+
+.font-mplus {
+  font-family: var(--font-mplus1);
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.di-button {
+  @apply before:di-ease-spring-smooth after:di-ease-spring-smooth di-relative
+  di-overflow-hidden di-bg-main-blue 
+  di-text-white di-shadow-2xl di-transition-all before:di-absolute after:di-absolute 
+  before:di-right-0 after:di-right-0 before:-di-top-8 after:-di-top-8 before:di-h-32 after:di-h-32 
+  before:di-w-12 before:di-translate-x-16 after:di-w-6 after:di-translate-x-12 
+  before:di-rotate-[40deg] before:di-bg-white before:di-opacity-30 before:di-duration-200 hover:before:di--translate-x-24
+  after:di-rotate-[40deg] after:di-bg-white after:di-opacity-30 after:di-duration-200 hover:after:di--translate-x-10;
+}
+
+nav {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.link-nav:after {
+  display: block;
+  content: "";
+  width: inherit;
+  border-bottom: solid 12px var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.link-nav:hover:after {
+  transform: scaleX(1);
+}
+
+.link-nav.from-left:after {
+  transform-origin: left;
+}
+
+.scale-img {
+  @apply di-relative di-overflow-hidden di-rounded-3xl;
+}
+
+.scale-item-img {
+  @apply di-relative di-z-0 di-transition-all di-duration-300 hover:di-scale-110;
+}
+
+@layer utilities {
+  .clip-custom {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 93%, 0% 93%);
+  }
+
+  .clip-custom-mobile {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 55% 100%, 45% 96%, 0% 96%);
+  }
+}

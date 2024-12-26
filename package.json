@@ -1,0 +1,28 @@
+{
+  "name": "template",
+  "private": true,
+  "scripts": {
+    "create-package": "pnpm --filter @di/cli-util start",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint -- --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.2.3",
+    "typescript": "5.5.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  }
+}

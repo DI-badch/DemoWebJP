@@ -1,0 +1,22 @@
+{
+  "name": "@di/orm-util",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "prisma db pull && prisma generate"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@di/eslint-config": "workspace:*",
+    "@di/typescript-config": "workspace:*",
+    "tsx": "^4.19.2",
+    "prisma": "^5.21.1",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.21.1"
+  }
+}

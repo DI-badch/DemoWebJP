@@ -1,0 +1,9 @@
+{
+  "extends": "@di/typescript-config/base.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
