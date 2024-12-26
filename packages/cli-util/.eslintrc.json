@@ -1,0 +1,3 @@
+{
+  "extends": ["@di/eslint-config/library.js"]
+}
