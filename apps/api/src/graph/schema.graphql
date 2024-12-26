@@ -1,7 +1,0 @@
-type Sample {
-  title: String
-}
-
-type Query {
-  samples: [Sample]
-}

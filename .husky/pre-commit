@@ -1,3 +1,0 @@
-pnpm lint
-
-pnpm exec lint-staged

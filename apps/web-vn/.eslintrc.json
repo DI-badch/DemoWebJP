@@ -1,3 +1,0 @@
-{
-  "extends": ["@di/eslint-config/next.js"]
-}
