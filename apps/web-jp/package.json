@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.1",
