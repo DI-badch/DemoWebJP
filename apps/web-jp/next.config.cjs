@@ -1,3 +1,5 @@
+// next.config.cjs
+
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["@di/components-ui"],
