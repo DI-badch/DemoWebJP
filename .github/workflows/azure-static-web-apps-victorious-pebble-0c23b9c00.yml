@@ -39,6 +39,8 @@ jobs:
         run: |
           cd out/apps/web-jp
           pnpm install
+          pnpm add typescript -D
+          tsc next.config.ts --outDir out && mv out/next.config.js .
           pnpm build
 
 
