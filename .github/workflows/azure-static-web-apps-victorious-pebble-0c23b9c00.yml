@@ -23,10 +23,6 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
-      # Setup PNPM global bin directory
-      - name: Setup PNPM global bin directory
-        run: pnpm setup
-
       # Install dependencies
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -40,8 +36,6 @@ jobs:
         run: |
           cd out/apps/web-jp
           pnpm install
-          pnpm add typescript -g
-          tsc next.config.ts --outDir out && mv out/next.config.js .
           pnpm build
 
       - name: Build And Deploy
