@@ -23,6 +23,10 @@
   }
 }
 
+.di-bg-main-blue {
+  background-color: var(--color-primary);
+}
+
 .di-button {
   @apply before:di-ease-spring-smooth after:di-ease-spring-smooth di-relative
   di-overflow-hidden di-bg-main-blue 
