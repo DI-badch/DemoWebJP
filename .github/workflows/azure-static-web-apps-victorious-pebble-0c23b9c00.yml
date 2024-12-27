@@ -27,6 +27,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      # Prune the workspace
+      - name: Prune workspace
+        run: pnpm turbo prune web-jp
+
       # Build the project
       - name: Build the project
         run: |
@@ -60,9 +64,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}
           action: "close"
 
-
 web:
-- double check dockerfile 
+  - double check dockerfile
 
-- create resource
-- test Dockerfile new
+  - create resource
+  - test Dockerfile new
