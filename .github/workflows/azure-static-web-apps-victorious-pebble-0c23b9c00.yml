@@ -39,7 +39,7 @@ jobs:
           cd apps/web-jp
           pnpm install
           pnpm build
-          cp -r out/apps/web-jp/.next out/apps/web-jp/.next
+          cp -r out/apps/web-jp/.next /github/workspace/out/apps/web-jp
 
       - name: Build And Deploy
         id: builddeploy
