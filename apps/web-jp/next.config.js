@@ -1,4 +1,4 @@
-// next.config.js
+// next.config.cjs
 
 const nextConfig = {
   reactStrictMode: true,
@@ -14,4 +14,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
