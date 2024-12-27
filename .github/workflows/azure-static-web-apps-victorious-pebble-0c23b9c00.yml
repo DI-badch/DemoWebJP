@@ -31,7 +31,7 @@ jobs:
       - name: Build the project
         run: |
           pnpm build --filter=web-jp
-          cp -r apps/web-jp/out/apps/web-jp/.next/.next apps/web-jp
+          cp -r apps/web-jp/out/apps/web-jp/.next apps/web-jp/
 
       - name: Build And Deploy
         id: builddeploy
@@ -59,3 +59,10 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}
           action: "close"
+
+
+web:
+- double check dockerfile 
+
+- create resource
+- test Dockerfile new

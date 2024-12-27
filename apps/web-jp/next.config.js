@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: "export",
   transpilePackages: ["@di/components-ui"],
   images: {
     remotePatterns: [
