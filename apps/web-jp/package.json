@@ -24,10 +24,10 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@di/eslint-config": "*",
-    "@di/tailwind-config": "*",
-    "@di/typescript-config": "*",
-    "@di/components-ui": "*",
+    "@di/eslint-config": "workspace:*",
+    "@di/tailwind-config": "workspace:*",
+    "@di/typescript-config": "workspace:*",
+    "@di/components-ui": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
