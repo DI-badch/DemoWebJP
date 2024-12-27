@@ -20,10 +20,8 @@ jobs:
           submodules: true
           lfs: false
 
-
       - name: Install pnpm
         run: npm install -g pnpm
-
 
       # Install dependencies
       - name: Install dependencies
@@ -33,16 +31,14 @@ jobs:
       - name: Prune workspace
         run: pnpm turbo prune web-jp
 
-
       # Build the project
       - name: Build the project
         run: |
           cd out/apps/web-jp
           pnpm install
-          pnpm add typescript -D
+          pnpm add typescript -g
           tsc next.config.ts --outDir out && mv out/next.config.js .
           pnpm build
-
 
       - name: Build And Deploy
         id: builddeploy
