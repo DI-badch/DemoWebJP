@@ -39,7 +39,7 @@ jobs:
           pnpm build
           cd ../../../
           cp -r out/apps/web-jp/out/apps/web-jp out/apps/web-jp
-          ls -a
+          ls out/apps/web-jp
 
       - name: Build And Deploy
         id: builddeploy
