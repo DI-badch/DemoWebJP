@@ -54,6 +54,7 @@ jobs:
         env: # Add environment variables here
           is_static_export: true
           SKIP_NPM_INSTALL: "true"
+          HUGO_VERSION: 0.58.0
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
