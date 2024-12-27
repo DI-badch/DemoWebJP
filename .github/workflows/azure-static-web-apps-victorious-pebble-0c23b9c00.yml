@@ -38,6 +38,7 @@ jobs:
       - name: Build the project
         run: |
           cd out/apps/web-jp
+          pnpm install
           pnpm build
 
 
