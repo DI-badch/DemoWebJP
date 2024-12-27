@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: "standalone",
   transpilePackages: ["@di/components-ui"],
   images: {
     remotePatterns: [
@@ -13,6 +13,7 @@ const nextConfig = {
       },
     ],
   },
+  distDir: "out/apps/web-jp/.next",
 };
 
 module.exports = nextConfig;
