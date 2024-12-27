@@ -31,7 +31,7 @@ jobs:
       - name: Build the project
         run: |
           pnpm build --filter=web-jp
-          cp -r apps/web-jp/out/apps/web-jp/ apps/web-jp/out
+          cp -r apps/web-jp/out/apps/web-jp/.next apps/web-jp/.next
 
       - name: Build And Deploy
         id: builddeploy
