@@ -49,7 +49,7 @@ jobs:
           action: "upload"
           app_location: "/out/apps/web-jp"  # Points to the app folder where the code resides
           api_location: ""  # No API folder in this case
-          output_location: "/out"  # Point to the root of the static export (out folder)
+          output_location: "/out/apps/web-jp/.next/standalone"  # Point to the root of the static export (out folder)
           skip_app_build: true
         env: # Add environment variables here
           is_static_export: true
