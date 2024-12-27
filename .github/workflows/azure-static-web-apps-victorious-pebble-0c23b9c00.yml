@@ -50,7 +50,6 @@ jobs:
           app_location: "out/apps/web-jp" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
-          skip_app_build: true
           app_build_command: "pnpm build"
         env: # Add environment variables here
           is_static_export: true
