@@ -1,5 +1,6 @@
 const nextConfig = {
   reactStrictMode: true,
+  output: 'standalone',
   transpilePackages: ["@di/components-ui"],
   images: {
     remotePatterns: [
