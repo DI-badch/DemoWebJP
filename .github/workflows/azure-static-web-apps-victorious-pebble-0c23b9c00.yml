@@ -34,15 +34,11 @@ jobs:
       # Build the project
       - name: Build the project
         run: |
-          cd out
-          cd apps/web-jp
+          cd out/apps/web-jp
           pnpm install
           pnpm build
           cd ../../../
-          mkdir web-jp
-          cp -r apps/web-jp ./web-jp
-          mkdir web-jp/.next
-          cp -r apps/web-jp/.next ./web-jp/.next
+          cp -r out/apps/web-jp/out/apps/web-jp out/apps/web-jp
 
       - name: Build And Deploy
         id: builddeploy
@@ -51,7 +47,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
-          app_location: "web-jp" # App source code path
+          app_location: "out/apps/web-jp" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           skip_app_build: true
