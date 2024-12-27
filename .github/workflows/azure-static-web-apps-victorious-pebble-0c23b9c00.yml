@@ -19,6 +19,28 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Prune the workspace
+      - name: Prune workspace
+        run: pnpm turbo prune web-jp
+
+
+      # Build the project
+      - name: Build the project
+        run: |
+          cd out/apps/web-jp
+          pnpm build
+
+
       - name: Build And Deploy
         id: builddeploy
         uses: azure/static-web-apps-deploy@latest
