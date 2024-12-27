@@ -39,7 +39,9 @@ jobs:
           pnpm install
           pnpm build
           cd ../../../
-          cp -r apps/web-jp .
+          mkdir web-jp
+          cp -r apps/web-jp ./web-jp
+          mkdir web-jp/.next
           cp -r apps/web-jp/.next ./web-jp/.next
 
       - name: Build And Deploy
