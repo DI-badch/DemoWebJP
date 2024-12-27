@@ -3,13 +3,7 @@ const nextConfig = {
   output: "export",
   transpilePackages: ["@di/components-ui"],
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        pathname: "/**",
-      },
-    ],
+    unoptimized: true,
   },
 };
 
