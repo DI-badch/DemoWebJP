@@ -27,23 +27,19 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Prune the workspace (if using turbo repo)
+      # Prune the workspace
       - name: Prune workspace
         run: pnpm turbo prune web-jp
-
-      # Install dependencies again in the app directory
-      - name: Install dependencies in app directory
-        run: |
-          cd out/apps/web-jp
-          pnpm install
 
       # Build the project
       - name: Build the project
         run: |
-          cd out/apps/web-jp
+          cd out
+          pnpm install
+          cd apps/web-jp
+          pnpm install
           pnpm build
 
-      # Deploy the project to Azure
       - name: Build And Deploy
         id: builddeploy
         uses: azure/static-web-apps-deploy@latest
@@ -51,12 +47,12 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_PEBBLE_0C23B9C00 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
           action: "upload"
-          app_location: "/out/apps/web-jp"  # Ensure this points to the correct build directory
-          api_location: ""  # No API folder
-          output_location: ""  # Optional, based on your build
+          app_location: "/out/apps/web-jp"  # Điều chỉnh để trỏ đến thư mục chứa tệp build
+          api_location: ""  # Không có API
+          output_location: ""  # Built app content directory - optional
           skip_app_build: true
-        env:
-          IS_STATIC_EXPORT: true
+        env: # Add environment variables here
+          is_static_export: true
           SKIP_NPM_INSTALL: "true"
 
   close_pull_request_job:
