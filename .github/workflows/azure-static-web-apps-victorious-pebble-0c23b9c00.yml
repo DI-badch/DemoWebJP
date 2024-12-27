@@ -39,6 +39,7 @@ jobs:
           pnpm build
           cd ../../../
           cp -r out/apps/web-jp/out/apps/web-jp out/apps/web-jp
+          cp -r out/apps/web-jp/out/apps/web-jp/.next out/apps/web-jp/.next
           ls out/apps/web-jp
 
       - name: Build And Deploy
