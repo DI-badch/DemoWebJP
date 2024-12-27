@@ -34,7 +34,9 @@ jobs:
       # Build the project
       - name: Build the project
         run: |
-          cd out/apps/web-jp
+          cd out
+          pnpm install
+          cd apps/web-jp
           pnpm install
           pnpm build
 
