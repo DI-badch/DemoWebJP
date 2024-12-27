@@ -23,6 +23,10 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      # Setup PNPM global bin directory
+      - name: Setup PNPM global bin directory
+        run: pnpm setup
+
       # Install dependencies
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
