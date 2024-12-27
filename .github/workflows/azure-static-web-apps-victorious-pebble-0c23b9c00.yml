@@ -50,10 +50,9 @@ jobs:
           app_location: "/out/apps/web-jp"  # Điều chỉnh để trỏ đến thư mục chứa tệp build
           api_location: ""  # Không có API
           output_location: ""  # Built app content directory - optional
-          # skip_app_build: true
+          skip_app_build: true
         env: # Add environment variables here
           is_static_export: true
-          SKIP_NPM_INSTALL: "true"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
