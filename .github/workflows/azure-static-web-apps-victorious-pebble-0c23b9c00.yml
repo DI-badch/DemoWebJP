@@ -40,7 +40,8 @@ jobs:
           cd ../../../
           cp -r out/apps/web-jp/out/apps/web-jp out/apps/web-jp
           cp -r out/apps/web-jp/out/apps/web-jp/.next out/apps/web-jp/.next
-          ls out/apps/web-jp
+          cp -r out/apps/web-jp/out/apps/web-jp/node_modules out/apps/web-jp/node_modules
+          ls -a out/apps/web-jp
 
       - name: Build And Deploy
         id: builddeploy
