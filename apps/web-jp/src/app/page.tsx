@@ -78,14 +78,14 @@ export default function Home() {
           <div className="lg:di-my-16 di-my-4">
             <NewsComponent title="ニュース" newsData={fakeNewsData} />
           </div>
-          <div className="di-bg-white-opacity-develop di-shadow di-rounded-lg di-shadow-white">
+          {/* <div className="di-bg-white-opacity-develop di-shadow di-rounded-lg di-shadow-white">
             <MarqueeComponent
               title="バッジ"
               images={imagesMarquee1}
               speed={120}
               gradient={false}
             />
-          </div>
+          </div> */}
         </div>
         <JpFooter />
       </div>
