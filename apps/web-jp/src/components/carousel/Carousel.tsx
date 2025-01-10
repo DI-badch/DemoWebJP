@@ -52,7 +52,7 @@ export default function CarouselComponent() {
                 />
                 <div className="di-absolute lg:di-top-[20%] lg:di-left-[10%] sm:di-top-[10%] di-top-16 di-left-6 di-right-6 sm:di-right-auto di-bg-white di-bg-opacity-20 lg:di-p-10 xl:di-p-20  sm:di-py-10 sm:di-px-4 di-p-8 sm:di-rounded-[45px] di-rounded-3xl sm:di-rounded-2xl">
                   <p
-                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium sm:di-text-[48px] xl:di-text-[96px] lg:di-text-[80px] di-text-4xl`}
+                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium sm:di-text-[48px] xl:di-text-[96px] lg:di-text-[80px] di-text-[30px]`}
                   >
                     データサイエンス
                   </p>
