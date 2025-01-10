@@ -20,7 +20,7 @@ export default function CarouselComponent() {
 
   return (
     <Carousel
-      className="di-max-w-[2560px] di-max-h-screen clip-custom-mobile md:clip-custom md:di-top-[92px] di-top-[74px]"
+      className="di-max-w-[2560px] di-max-h-screen clip-custom-mobile md:clip-custom sm:di-top-[92px] di-top-[74px]"
       opts={{
         containScroll: "trimSnaps",
         loop: true,
@@ -41,7 +41,7 @@ export default function CarouselComponent() {
             .includes("slide-03.webp");
           return (
             <CarouselItem key={item.id}>
-              <div className="di-relative md:di-h-auto di-h-[650px]">
+              <div className="di-relative lg:di-h-[900px] di-h-[600px]">
                 <Image
                   loading="lazy"
                   width={1920}
@@ -50,17 +50,17 @@ export default function CarouselComponent() {
                   src={item.src}
                   alt={item.alt}
                 />
-                <div className="di-absolute md:di-top-[20%] di-top-16 md:di-left-52 di-left-3 di-right-3 md:di-right-auto di-bg-white di-bg-opacity-20 md:di-p-20 di-p-8 md:di-rounded-[45px] di-rounded-3xl">
+                <div className="di-absolute lg:di-top-[20%] lg:di-left-[10%] sm:di-top-[10%] di-top-16 di-left-6 di-right-6 sm:di-right-auto di-bg-white di-bg-opacity-20 lg:di-p-20  sm:di-py-10 sm:di-px-4 di-p-8 sm:di-rounded-[45px] di-rounded-3xl sm:di-rounded-2xl">
                   <p
-                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium md:di-text-8xl di-text-6xl`}
+                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium sm:di-text-[48px] lg:di-text-[96px] di-text-2xl`}
                   >
                     データサイエンス
                   </p>
                   <hr
-                    className={`${isCurrentText ? "di-border-black" : "di-border-white"} di-border-2 md:di-my-10 di-my-8 md:di-w-96 di-w-60`}
+                    className={`${isCurrentText ? "di-border-black" : "di-border-white"} sm:di-border-1 lg:di-border-2 sm:di-my-10 di-my-8 sm:di-w-80 di-w-60`}
                   />
                   <p
-                    className={`${isCurrentText ? "di-text-black" : "di-text-main-white"} md:di-w-96 di-text-lg`}
+                    className={`${isCurrentText ? "di-text-black" : "di-text-main-white"} sm:di-text-[18px] sm:di-max-w-[500px] di-text-lg`}
                   >
                     お客様のビジネスを成功に導く、革新的なデジタルソリューションを提供いたします。
                   </p>
@@ -69,7 +69,7 @@ export default function CarouselComponent() {
                     Icon={ArrowRight}
                     className="di-mt-10"
                   >
-                    <p className="font-mplus di-text-xl di-font-bold">
+                    <p className="font-mplus di-text-[16px] di-font-bold">
                       詳しく見る
                     </p>
                   </JpButton>
@@ -79,11 +79,11 @@ export default function CarouselComponent() {
           );
         })}
       </CarouselContent>
-      <div className="di-absolute di-hidden di-top-2/4 md:di-flex di-w-full di-justify-between di-items-center di-px-16">
+      <div className="di-absolute di-hidden di-top-2/4 lg:di-flex di-w-full di-justify-between di-items-center di-px-16">
         <CarouselPrevious className="di-bg-white-opacity" />
         <CarouselNext className="di-bg-white-opacity" />
       </div>
-      <div className="di-absolute di-bottom-20 md:di-left-1/2 di-transform md:di--translate-x-1/2 di-flex di-gap-2 di-left-3">
+      <div className="di-absolute di-bottom-40 lg:di-bottom-[90px] lg:di-left-1/2 di-transform lg:di--translate-x-1/2 di-flex di-gap-1 di-left-6">
         {fakeImageCarousel.map((item) => (
           <button
             type="button"

@@ -17,24 +17,30 @@ export function ServiceComponent({
 }: ServiceProps) {
   return (
     <div
-      className={`${reverse ? "di-flex-row-reverse" : ""} di-flex di-flex-wrap di-items-start di-justify-between md:di-gap-24 di-gap-4`}
+      className={`${reverse ? "sm:di-flex-row-reverse" : "sm:di-flex-row"} di-flex di-w-full di-flex-col di-items-start di-justify-between di-gap-4 lg:di-gap-8`}
     >
-      <div className="di-flex-1 di-min-w-96 scale-img di-rounded-xl md:di-rounded-3xl">
+      <div className="sm:di-w-1/2 di-w-full scale-img di-rounded-xl md:di-rounded-3xl">
         <Image
           src={image}
-          width={880}
-          height={480}
           alt="Image service"
-          className="di-w-[880px] scale-item-img"
+          className="di-w-full scale-item-img"
+          width={100}
+          height={480}
         />
       </div>
-      <div className="di-flex-1">
-        <p className="md:di-font-medium di-font-bold md:di-text-5xl di-py-2 di-text-3xl">
+      <div className="sm:di-w-1/2 di-w-full di-justify-between di-flex di-flex-wrap">
+        <p className="di-font-medium di-font-bold sm:di-text-[32px] di-py-2 sm:di-p-0 di-text-3xl">
           {title}
         </p>
-        <p className="di-text-lg md:di-py-10 di-py-6">{description}</p>
-        <Button variant="navigation" Icon={ArrowRight} className="md:di-mt-10">
-          <p className="font-mplus di-text-xl di-font-bold">詳しく見る</p>
+        <p className="di-text-[12px] lg:di-text-xl sm:di-line-clamp-[4] lg:di-line-clamp-[4] xl:di-line-clamp-[6] di-mt-3 lg:di-mt-8">
+          {description}
+        </p>
+        <Button
+          variant="navigation"
+          Icon={ArrowRight}
+          className="di-mt-2 sm:di-mt-4 xl:di-mt-8"
+        >
+          <p className="font-mplus di-text-[16px] di-font-bold">詳しく見る</p>
         </Button>
       </div>
     </div>

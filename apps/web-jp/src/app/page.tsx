@@ -33,7 +33,7 @@ export default function Home() {
             quality={100}
             sizes="100vw"
             priority
-            className="di-object-cover lg:di-h-max di-h-full"
+            className="di-object-cover lg:di-h-max"
           />
         ))}
       </div>
@@ -52,11 +52,11 @@ export default function Home() {
           />
           会議を予約する
         </div>
-        <div className="lg:di-mx-16 md:di-mx-8 di-mx-3">
-          <div className="md:di-mt-40 di-mt-20 md:di-mb-20 di-mb-8 di-flex di-items-center di-justify-center">
+        <div className="xl:di-mx-16 lg:di-mx-8 sm:di-mx-6 di-mx-3">
+          <div className="sm:di-mt-32 di-mt-20 sm:di-mb-20 sm:di-mb-6 di-mb-8 di-flex di-items-center di-justify-center">
             <TitleComponent title="サービス" />
           </div>
-          <div className="di-flex di-flex-col md:di-gap-[72px] di-gap-10">
+          <div className="di-flex di-flex-col sm:di-gap-[30px] di-gap-10">
             {fakeDataService.map((item) => (
               <ServiceComponent
                 key={item.id}

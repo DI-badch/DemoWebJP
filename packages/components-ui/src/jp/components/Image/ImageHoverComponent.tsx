@@ -24,7 +24,7 @@ export function ImageHoverComponent({
 
   return (
     <div
-      className="di-relative di-overflow-hidden di-rounded-3xl di-cursor-pointer md:di-max-w-[424px] di-w-full"
+      className="di-relative di-overflow-hidden di-rounded-3xl di-cursor-pointer sm:di-max-w-[424px] di-w-full di-min-h-[300px]"
       onMouseEnter={() => {
         setIsHovered(true);
       }}
@@ -43,8 +43,8 @@ export function ImageHoverComponent({
     >
       <Image
         src={imageSrc}
-        width={424}
-        height={550}
+        width={300}
+        height={400}
         alt={imageAlt}
         className="di-h-full di-w-full di-object-cover di-rounded-3xl"
       />
@@ -53,13 +53,13 @@ export function ImageHoverComponent({
         animate={{
           opacity: isHovered ? 0 : 1,
           y: isHovered ? -50 : 0,
-          filter: isHovered ? "blur(8px)" : "blur(0px)",
+          filter: isHovered ? "blur(4px)" : "blur(0px)",
         }}
         transition={{ duration: 0.2 }}
-        className="di-absolute di-inset-0 di-flex di-gap-5 di-flex-col di-justify-center di-items-center di-text-white di-px-6 di-bg-black di-bg-opacity-5"
+        className="di-absolute di-inset-0 di-flex di-gap-2 di-flex-col di-justify-center di-items-center di-text-white di-bg-black di-bg-opacity-5"
       >
-        <Image src={iconSrc} alt={iconAlt} width={145} height={145} />
-        <p className="di-text-center di-font-mplus1 di-font-medium di-text-4xl di-px-[45px]">
+        <Image src={iconSrc} alt={iconAlt} width={80} height={80} />
+        <p className="di-text-center di-font-mplus1 di-font-medium lg:di-text-4xl sm:di-text-[12px] di-px-[45px]">
           {mainText}
         </p>
       </motion.div>
@@ -71,9 +71,11 @@ export function ImageHoverComponent({
           y: isHovered ? 0 : 50,
         }}
         transition={{ duration: 0.2 }}
-        className="di-absolute di-inset-0 di-flex di-flex-col di-justify-center di-items-center di-text-white di-px-6 di-bg-black di-bg-opacity-10"
+        className="di-absolute di-inset-0 di-flex di-flex-col di-justify-center di-items-center di-text-white di-w-full di-bg-black di-bg-opacity-10"
       >
-        <p className="di-text-lg di-text-center di-px-5">{hoverText}</p>
+        <p className="lg:di-text-lg sm:di-text-[12px] di-text-center di-px-6 di-py-4">
+          {hoverText}
+        </p>
       </motion.div>
     </div>
   );

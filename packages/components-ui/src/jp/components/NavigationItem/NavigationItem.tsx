@@ -14,7 +14,7 @@ export const NavigationItem: React.FC<NavigationItemProps> = ({
   return (
     <Link
       href={href}
-      className={`from-left nav-item lg:di-text-xl di-pl-10 xl:di-leading-[80px] link-nav ${className}`}
+      className={`from-left c nav-item xl:di-text-xl lg:di-text-lg lg:di-pl-4 xl:di-pl-12 xl:di-leading-[80px] link-nav ${className}`}
     >
       <p className="hover:di-font-bold">{title}</p>
     </Link>

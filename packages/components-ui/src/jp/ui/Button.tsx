@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "di-pl-6 di-pr-2 di-py-2 di-inline-flex di-items-center di-justify-center di-gap-6 di-transition-colors focus-visible:di-outline-none focus-visible:di-ring-2 focus-visible:di-ring-offset-2 di-rounded-full";
+    "di-pl-6 di-pr-2 lg:di-py-2 di-py-1 di-inline-flex di-items-center di-justify-center di-gap-6 di-transition-colors focus-visible:di-outline-none focus-visible:di-ring-2 focus-visible:di-ring-offset-2 di-rounded-full";
 
   const variantStyles = {
     default: "di-bg-main-blue",
@@ -48,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
       {children}
       {Icon ? (
         <div
-          className={`${!children ? "di-border-transparent" : null} di-transition-all di-border-2 di-p-2 di-rounded-full group-hover:di-border-main-blue ${disabled ? "di-border-main-gray" : null}`}
+          className={`${!children ? "di-border-transparent" : null} di-transition-all di-border-2 lg:di-p-2 di-p-1 di-rounded-full group-hover:di-border-main-blue ${disabled ? "di-border-main-gray" : null}`}
         >
           <Icon />
         </div>

@@ -19,18 +19,18 @@ function Header() {
   };
 
   return (
-    <header className="di-flex font-mplus di-justify-between di-items-center di-fixed di-top-0 di-bg-white md:di-px-16 di-px-3 di-z-50 di-w-full">
+    <header className="di-flex font-mplus di-justify-between di-items-center di-fixed di-top-0 di-bg-white lg:di-px-4 di-px-3 di-z-50 di-w-full">
       <Image
         width={200}
         height={85}
         alt="Image"
         src="/logo.png"
-        className="di-w-52 md:di-w-60 di-h-full di-object-cover"
+        className="di-w-52 md:di-w-60 di-h-24 di-object-contain"
         sizes="100vw"
       />
 
       {/*MOBILE UI*/}
-      <nav className="md:di-hidden">
+      <nav className="lg:di-hidden">
         <button
           type="button"
           onClick={toggleContent}
@@ -40,7 +40,7 @@ function Header() {
         </button>
       </nav>
       {isOpen ? (
-        <div className="di-absolute md:di-hidden di-top-[74px] di-rounded-b-lg di-right-0 di-left-0 di-bg-main-black di-text-white di-transition-all di-duration-300">
+        <div className="di-absolute lg:di-hidden di-top-[94px] di-rounded-b-lg di-right-0 di-left-0 di-bg-main-black di-text-white di-transition-all di-duration-300">
           <div className="di-px-3 di-my-20 ">
             {fakeDataNav.map((item) => (
               <div key={item.title}>
@@ -67,7 +67,7 @@ function Header() {
                     className="di-flex di-justify-between di-items-center"
                   >
                     <p
-                      className={`di-text-[32px] di-py-3 ${expandedParent === item.title ? "tex" : ""}`}
+                      className={`di-text-[28px] di-py-3 ${expandedParent === item.title ? "tex" : ""}`}
                     >
                       {item.title}
                     </p>
@@ -97,7 +97,7 @@ function Header() {
         </div>
       ) : null}
       {/*DESKTOP UI*/}
-      <nav className="md:di-flex di-justify-between di-items-center di-hidden">
+      <nav className="lg:di-flex di-justify-between di-items-center di-hidden">
         {fakeDataNav.map((item) => (
           <JpNavigationItem
             key={item.id}
