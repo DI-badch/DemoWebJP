@@ -15,7 +15,7 @@ import { JpButton } from "@di/components-ui";
 import { fakeImageCarousel } from "@/data/_data";
 
 export default function CarouselComponent() {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
 
   return (
@@ -29,7 +29,7 @@ export default function CarouselComponent() {
         if (api) {
           setCarouselApi(api);
           api.on("select", () => {
-            setActiveIndex(api.selectedScrollSnap());
+            setActiveIndex(api.selectedScrollSnap() + 1);
           });
         }
       }}
@@ -50,9 +50,9 @@ export default function CarouselComponent() {
                   src={item.src}
                   alt={item.alt}
                 />
-                <div className="di-absolute lg:di-top-[20%] lg:di-left-[10%] sm:di-top-[10%] di-top-16 di-left-6 di-right-6 sm:di-right-auto di-bg-white di-bg-opacity-20 lg:di-p-20  sm:di-py-10 sm:di-px-4 di-p-8 sm:di-rounded-[45px] di-rounded-3xl sm:di-rounded-2xl">
+                <div className="di-absolute lg:di-top-[20%] lg:di-left-[10%] sm:di-top-[10%] di-top-16 di-left-6 di-right-6 sm:di-right-auto di-bg-white di-bg-opacity-20 lg:di-p-10 xl:di-p-20  sm:di-py-10 sm:di-px-4 di-p-8 sm:di-rounded-[45px] di-rounded-3xl sm:di-rounded-2xl">
                   <p
-                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium sm:di-text-[48px] lg:di-text-[96px] di-text-2xl`}
+                    className={`${isCurrentText ? "di-from-main-blue di-via-main-gradientB di-to-main-gradientA di-bg-gradient-to-r di-bg-clip-text di-text-transparent" : "di-text-main-white"} di-font-medium sm:di-text-[48px] xl:di-text-[96px] lg:di-text-[80px] di-text-4xl`}
                   >
                     データサイエンス
                   </p>
@@ -79,7 +79,7 @@ export default function CarouselComponent() {
           );
         })}
       </CarouselContent>
-      <div className="di-absolute di-hidden di-top-2/4 lg:di-flex di-w-full di-justify-between di-items-center di-px-16">
+      <div className="di-absolute di-hidden di-top-1/4 lg:di-flex di-w-full di-justify-between di-items-center xl:di-px-16 sm:di-px-6">
         <CarouselPrevious className="di-bg-white-opacity" />
         <CarouselNext className="di-bg-white-opacity" />
       </div>
