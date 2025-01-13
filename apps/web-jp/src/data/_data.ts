@@ -4,21 +4,21 @@ export const dataFake = [
     title: "タイトル",
     description:
       "Data Impactは、親会社であるHeadwatersとともに、マイクロソフト、ソニー、Nvidiaといった世界有数の企業の公式パートナーです。",
-    image: "/background-develop.png",
+    image: "/develop.png",
   },
   {
     id: 2,
     title: "タイトル",
     description:
       "AIサービス、基幹システム開発サービス、Webシステム、アプリケーション、研究開発(R&D)を競争力のあるコストと優れた品質で提供します。",
-    image: "/background-develop.png",
+    image: "/develop.png",
   },
   {
     id: 3,
     title: "タイトル",
     description:
       "お客様のプロセスの最適化とビジネスパフォーマンスの向上に貢献することをお約束します。",
-    image: "/background-develop.png",
+    image: "/develop.png",
   },
 ];
 
@@ -333,16 +333,21 @@ export const fakeDataImageTechStack = [
 export const fakeImageCarousel = [
   {
     id: 0,
+    src: "/data-impact.png",
+    alt: "data-impact.png",
+  },
+  {
+    id: 1,
     src: "/Slide-01.webp",
     alt: "Slide-01.webp",
   },
   {
-    id: 1,
+    id: 2,
     src: "/Slide-02.webp",
     alt: "Slide-02.webp",
   },
   {
-    id: 2,
+    id: 3,
     src: "/Slide-03.webp",
     alt: "Slide-03.webp",
   },

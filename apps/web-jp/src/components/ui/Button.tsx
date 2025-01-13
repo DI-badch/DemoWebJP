@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
     "di-pl-6 di-pr-2 di-py-2 di-inline-flex di-items-center di-justify-center di-gap-6 di-transition-colors focus-visible:di-outline-none focus-visible:di-ring-2 focus-visible:di-ring-offset-2 di-rounded-full";
 
   const variantStyles = {
-    default: "di-bg-main-blue",
+    default: "",
     navigation: "di-bg-main-blue di-whitespace-nowrap",
   };
 

@@ -19,10 +19,8 @@ export default function TechStackComponent() {
     toggleOpenState;
   }, [openStates]);
   return (
-    <div>
-      <div className="lg:di-mt-40 di-mt-10 di-mb-5 di-flex">
-        <TitleComponent title="弊社が得意の技術" />
-      </div>
+    <div className="lg:di-mt-60 di-mt-10 di-mb-5">
+      <TitleComponent title="弊社が得意の技術" />
       <div className="sm:di-relative">
         <div className="sm:di-absolute di-h-full sm:di-flex sm:di-flex-row di-items-center di-justify-center di-w-full">
           {fakeDataImageTechStack.map((techData) => {
